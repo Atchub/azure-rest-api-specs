@@ -14,10 +14,7 @@
             "name": "scoped-resource-name1",
             "type": "Microsoft.HybridCompute/privateLinkScopes/scopedResources",
             "properties": {
-              "linkedResources": [
-                "/subscriptions/00000000-1111-2222-3333-444444444444/resourceGroups/MyResourceGroup/providers/Microsoft.HybridCompute/Machines/machineName1",
-                "/subscriptions/00000000-1111-2222-3333-444444444444/resourceGroups/MyResourceGroup/providers/Microsoft.Kubernetes/ConnectedCluster/ConnectedClusterName1"
-              ],
+              "linkedResourceId": "/subscriptions/00000000-1111-2222-3333-444444444444/resourceGroups/MyResourceGroup/providers/Microsoft.HybridCompute/Machines/machineName1",
               "provisioningState": "Succeeded"
             }
           },
@@ -26,10 +23,7 @@
             "name": "scoped-resource-name2",
             "type": "Microsoft.HybridCompute/privateLinkScopes/scopedResources",
             "properties": {
-              "linkedResources": [
-                "/subscriptions/00000000-1111-2222-3333-444444444444/resourceGroups/MyResourceGroup/providers/Microsoft.HybridCompute/Machines/machineName2",
-                "/subscriptions/00000000-1111-2222-3333-444444444444/resourceGroups/MyResourceGroup/providers/Microsoft.Kubernetes/ConnectedCluster/ConnectedClusterName2"
-              ],
+              "linkedResourceId": "/subscriptions/00000000-1111-2222-3333-444444444444/resourceGroups/MyResourceGroup/providers/Microsoft.Kubernetes/ConnectedCluster/ConnectedClusterName2",
               "provisioningState": "Succeeded"
             }
           }

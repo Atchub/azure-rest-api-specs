@@ -1088,13 +1088,9 @@
       "description": "Properties of a private link scoped resource.",
       "type": "object",
       "properties": {
-        "linkedResources": {
-          "description": "The resource id of the scoped Azure Arc resources.",
-          "type": "array",
-          "items": {
-            "type": "string",
-            "description": "Azure Resource Manager Id for a Arc Server or Cluster."
-          }
+        "linkedResourceId": {
+          "description": "The resource id of the scoped Azure monitor resource.",
+          "type": "string"
         },
         "provisioningState": {
           "description": "State of the private endpoint connection.",
