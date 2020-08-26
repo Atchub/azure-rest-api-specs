@@ -866,6 +866,10 @@
     "HybridComputePrivateLinkScopeProperties": {
       "description": "Properties that define a Azure Arc PrivateLinkScope resource.",
       "properties": {
+        "publicNetworkAccess": {
+          "description": "The network access type for accessing Arc Backend Services.",
+          "$ref": "#/definitions/PublicNetworkAccessType"
+        },
         "provisioningState": {
           "type": "string",
           "description": "Current state of this PrivateLinkScope: whether or not is has been provisioned within the resource group it is defined. Users cannot change this value but are able to read from it. Values will include Provisioning ,Succeeded, Canceled and Failed.",
@@ -1181,6 +1185,29 @@
         }
       },
       "description": "The resource management error response."
+    },
+    "PublicNetworkAccessType": {
+      "type": "string",
+      "description": "The network access from agents on Machine to Arc backend is via Public Ineternet. By default it is Disabled",
+      "default": "Disabled",
+      "enum": [
+        "Enabled",
+        "Disabled"
+      ],
+      "x-ms-enum": {
+        "name": "PublicNetworkAccessType",
+        "modelAsString": true,
+        "values": [
+          {
+            "value": "Enabled",
+            "description": "Enables public connectivity between agents on Machine to Arc services."
+          },
+          {
+            "value": "Disabled",
+            "description": "Disables public connectivity between agents on Machine to Arc services. Private endpoint need to be created if disabled"
+          }
+        ]
+      }
     }
   },
   "parameters": {

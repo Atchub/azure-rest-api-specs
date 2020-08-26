@@ -848,10 +848,6 @@
           "type": "string",
           "description": "Specifies the DNS fully qualified display name."
         },
-        "privateEndpoint": {
-          "description": "The network access type for accessing Arc Backend Services.",
-          "$ref": "#/definitions/PrivateNetworkAccessType"
-        },
         "privateLinkScopedResources": {
           "readOnly": true,
           "type": "array",
@@ -1203,29 +1199,6 @@
         }
       },
       "description": "Describes the Machine Extensions List Result."
-    },
-    "PrivateNetworkAccessType": {
-      "type": "string",
-      "description": "The network access from agents on Machine to Arc backend is via Public Ineternet. By default it is Enabled",
-      "default": "Disabled",
-      "enum": [
-        "Enabled",
-        "Disabled"
-      ],
-      "x-ms-enum": {
-        "name": "PrivateNetworkAccessType",
-        "modelAsString": true,
-        "values": [
-          {
-            "value": "Enabled",
-            "description": "Enables public connectivity between agents on Machine to Arc services."
-          },
-          {
-            "value": "Disabled",
-            "description": "Disables public connectivity between agents on Machine to Arc services. Private endpoint need to be created if disabled"
-          }
-        ]
-      }
     }
   },
   "parameters": {}
